@@ -216,5 +216,9 @@ function navigationPress (addCoordY, addCoordX){
 targetScroll(StageOn,1);
 resizeFloor();
 
+$.ascensor = {
+	navigationPress: navigationPress
+};
+
 };
 })(jQuery);
