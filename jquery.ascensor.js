@@ -86,10 +86,13 @@ function targetScroll(floor, time){
 	if(params.Direction=='chocolate'){
 		var AscensorMap=params.AscensorMap.split(' & ');
 		var target = AscensorMap[floor-1].split('|');
+		$(node).trigger('startScrolling', { x: target[1] - 1, y: target[0] -1 });
 		$(node).stop().animate({
 			scrollLeft:(target[1]-1)*windowWidth,
 			scrollTop:(target[0]-1)*windowHeight
-		},time);
+		},time,function() {
+			$(node).trigger('finishScrolling', { x: target[1] - 1, y: target[0] -1 });
+		});
 	}
 
 	StageOn=floor;
