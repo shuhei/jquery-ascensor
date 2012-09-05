@@ -1,4 +1,4 @@
-jQuery Ascensor Plugin
+# jQuery Ascensor Plugin
 
 [This plugin](http://kirkas.ch/ascensor) was originally created by [Leo Galley aka Kirkas](http://kirkas.ch).
 
