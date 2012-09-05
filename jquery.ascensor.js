@@ -7,7 +7,7 @@
 		AscensorMap:'',
 		AscensorName:'ascensor',
 		AscensorFloorName:'',
-		Time:1000,
+		Time:1000
 	},params);	
 
 var node=this;
@@ -138,8 +138,8 @@ var checkOrientation = function(){
        resizeFloor();
     }
 };
-window.addEventListener("resize", checkOrientation, false);
-window.addEventListener("orientationchange", checkOrientation, false);
+$(window).on("resize", checkOrientation);
+$(window).on("orientationchange", checkOrientation);
 setInterval(checkOrientation, 1);
 
 //KEY EVENT
