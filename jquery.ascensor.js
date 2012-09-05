@@ -61,8 +61,8 @@ function resizeFloor(){
 	$(node).height(windowHeight);
 	
 	if(params.Direction=='x'){
-		$(node).children().css('position','absolute');
-		$(node).children().each(function(index){$(this).css('left',index*windowWidth);})
+		$(node).children(params.ChildType).css('position','absolute');
+		$(node).children(params.ChildType).each(function(index){$(this).css('left',index*windowWidth);})
 	}
 
 	if(params.Direction=='chocolate'){
